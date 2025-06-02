@@ -170,3 +170,37 @@ read_sn3_pascalvincent <- function(path) {
   a <- aperm(a, perm = rev(seq_along(dim)))
   a
 }
+
+
+#' Fashion-MNIST
+#'
+#' Prepares the [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset
+#'   and optionally downloads it.
+#'
+#' @param root (string): Root directory of dataset where
+#'   `FashionMNIST/processed/training.pt` and `FashionMNIST/processed/test.pt` exist.
+#' @param train (bool, optional): If TRUE, creates dataset from `training.pt`,
+#'   otherwise from `test.pt`.
+#' @param download (bool, optional): If TRUE, downloads the dataset from the
+#'   internet and puts it in root directory. If dataset is already downloaded,
+#'   it is not downloaded again.
+#' @param transform (callable, optional): A function/transform that takes in an
+#'   image and returns a transformed version.
+#' @param target_transform (callable, optional): A function/transform that takes
+#'   in the target and transforms it.
+#'
+#' @export
+fashion_mnist_dataset <- dataset(
+  name = "fashion_mnist_dataset",
+  inherit = mnist_dataset,
+  resources = list(
+    c("http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz", "8d4fb7e6c68d591d4c3dfef9ec88bf0d"),
+    c("http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz", "25c81989df183df01b3e8a0aad5dffbe"),
+    c("http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz", "bef4ecab320f06d8554ea6380940ec79"),
+    c("http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz", "bb300cfdad3c16e7a12a480ee83cd310")
+  ),
+  classes = c(
+    '0 - T-shirt/top', '1 - Trouser', '2 - Pullover', '3 - Dress', '4 - Coat',
+    '5 - Sandal', '6 - Shirt', '7 - Sneaker', '8 - Bag', '9 - Ankle boot'
+  )
+)
