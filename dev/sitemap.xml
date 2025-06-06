@@ -16,6 +16,7 @@
 <url><loc>/reference/draw_bounding_boxes.html</loc></url>
 <url><loc>/reference/draw_keypoints.html</loc></url>
 <url><loc>/reference/draw_segmentation_masks.html</loc></url>
+<url><loc>/reference/fashion_mnist_dataset.html</loc></url>
 <url><loc>/reference/image_folder_dataset.html</loc></url>
 <url><loc>/reference/index.html</loc></url>
 <url><loc>/reference/kmnist_dataset.html</loc></url>
@@ -26,6 +27,7 @@
 <url><loc>/reference/model_mobilenet_v2.html</loc></url>
 <url><loc>/reference/model_resnet.html</loc></url>
 <url><loc>/reference/model_vgg.html</loc></url>
+<url><loc>/reference/places365_dataset.html</loc></url>
 <url><loc>/reference/tensor_image_browse.html</loc></url>
 <url><loc>/reference/tensor_image_display.html</loc></url>
 <url><loc>/reference/tiny_imagenet_dataset.html</loc></url>
