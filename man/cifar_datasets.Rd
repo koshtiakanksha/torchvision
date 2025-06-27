@@ -52,6 +52,13 @@ item <- ds[1]
 item$x
 item$y
 }
+
+\dontrun{
+ds <- cifar100_dataset(root = tempdir(), download = TRUE)
+item <- ds[1]
+item$x
+item$y
+}
 }
 \concept{datasets}
 }
