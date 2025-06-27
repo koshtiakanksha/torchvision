@@ -14,6 +14,17 @@
 #' @param download (bool, optional): If true, downloads the dataset from the internet and
 #'   puts it in root directory. If dataset is already downloaded, it is not
 #'   downloaded again.
+#' @return An object of class `cifar10_dataset`. Each item is a list with
+#'   `x` (a 32x32x3 integer array) and `y` (the class label).
+#'
+#' @examples
+#' \dontrun{
+#' ds <- cifar10_dataset(root = tempdir(), download = TRUE)
+#' item <- ds[1]
+#' item$x
+#' item$y
+#' }
+#' @family datasets
 #'
 #' @export
 cifar10_dataset <- torch::dataset(

@@ -37,6 +37,22 @@ target and transforms it.}
 \item{download}{(bool, optional): If true, downloads the dataset from the internet and
 puts it in root directory. If dataset is already downloaded, it is not
 downloaded again.}
+\value{
+An object of class \code{cifar10_dataset}. Each item is a list with:
+\itemize{
+  \item \code{x}: a 32x32x3 integer array representing the image.
+  \item \code{y}: an integer class label.
+}
+}
+\examples{
+\dontrun{
+ds <- cifar10_dataset(root = tempdir(), download = TRUE)
+item <- ds[1]
+item$x
+item$y
+}
+}
+\concept{datasets}
 }
 \description{
 \href{https://www.cs.toronto.edu/~kriz/cifar.html}{CIFAR10} Dataset.
